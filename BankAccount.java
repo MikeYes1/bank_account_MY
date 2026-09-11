@@ -19,8 +19,14 @@ public class BankAccount {
         // Return true if the withdrawal succeeds.
         // Return false otherwise. return false;
         
-        
-        return false;
+        if(this.balance - amount > 50){
+            this.balance -= amount;
+            System.out.println("The withdraw was successful");
+            return true;
+        } else {
+            System.out.println("The withdraw wasn't successful");
+            return false;
+        }
     }
     
     public String getAccountSummary() {
