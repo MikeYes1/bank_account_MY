@@ -21,12 +21,14 @@ public class BankAccount {
         
         if(this.balance - amount > 50){
             this.balance -= amount;
-            System.out.println("The withdraw was successful");
+            this.balance -= 2;
+            System.out.println("The withdraw was successful, -$2");
             return true;
         } else {
             System.out.println("The withdraw wasn't successful");
             return false;
         }
+
     }
     
     public String getAccountSummary() {
